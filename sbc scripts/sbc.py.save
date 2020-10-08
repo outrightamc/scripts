@@ -1,0 +1,23 @@
+from pathlib import Path
+import re
+import json
+import pandas as pd
+
+
+output_table3 = []
+
+f = open('/home/c.alvarez/scripts/sbc_interfaces.txt', 'r')
+read_file = f.read()
+
+regex3 = re.compile(r'name\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s\s(.*)')
+match_reg3 = regex3.finditer(read_file)
+
+if match_reg3:
+    for match3 in match_reg3:
+        output_table3.append(match3.group(1))
+    print ('\n'.join(map(str, output_table3)))
+
+#df2 = pd.DataFrame(output_table3)
+
+#df3 = pd.DataFrame(df2['teams'].to_list(), columns=['team1','team2'])
+#print (df3)

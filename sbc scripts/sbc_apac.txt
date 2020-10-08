@@ -1,0 +1,805 @@
+shisbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid shisbc01p
+Warning: Permanently added 'shisbc01p,10.249.35.211' (RSA) to the list of known hosts.
+rancid@shisbc01p's password: 
+
+JPSHISBC01> 
+JPSHISBC01> cli more disabled
+The ACLI 'more' option has been disabled
+JPSHISBC01>  show running-config network-interface short
+network-interface
+        name                                    M00
+        sub-port-id                             21
+        ip-address                              10.249.21.220
+        pri-utility-addr                        10.249.21.221
+        sec-utility-addr                        10.249.21.222
+        netmask                                 255.255.255.0
+        gateway                                 10.249.21.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.249.35.100
+        dns-ip-backup1                          10.250.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.249.21.150
+                                                10.249.21.220
+        icmp-address                            10.249.21.150
+                                                10.249.21.220
+network-interface
+        name                                    M00
+        sub-port-id                             22
+        ip-address                              10.249.22.220
+        pri-utility-addr                        10.249.22.221
+        sec-utility-addr                        10.249.22.222
+        netmask                                 255.255.255.0
+        gateway                                 10.249.22.254
+        dns-ip-primary                          10.249.35.100
+        dns-ip-backup1                          10.250.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.249.22.150
+                                                10.249.22.220
+        icmp-address                            10.249.22.150
+                                                10.249.22.220
+network-interface
+        name                                    M00
+        sub-port-id                             33
+        description                             core viper
+        ip-address                              10.249.33.220
+        pri-utility-addr                        10.249.33.221
+        sec-utility-addr                        10.249.33.222
+        netmask                                 255.255.255.0
+        gateway                                 10.249.33.254
+        dns-ip-primary                          10.249.35.100
+        dns-ip-backup1                          10.250.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.249.33.220
+                                                10.249.33.225
+                                                10.249.33.226
+                                                10.249.33.223
+                                                10.249.33.227
+                                                10.249.33.224
+                                                10.249.33.230
+        icmp-address                            10.249.33.220
+                                                10.249.33.225
+                                                10.249.33.226
+                                                10.249.33.223
+                                                10.249.33.227
+                                                10.249.33.224
+                                                10.249.33.230
+network-interface
+        name                                    M00
+        sub-port-id                             34
+        ip-address                              10.249.34.220
+        pri-utility-addr                        10.249.34.221
+        sec-utility-addr                        10.249.34.222
+        netmask                                 255.255.255.0
+        gateway                                 10.249.34.254
+        hip-ip-list                             10.249.34.220
+                                                10.249.34.223
+                                                10.249.34.225
+                                                10.249.34.226
+                                                10.249.34.224
+                                                10.249.34.227
+        icmp-address                            10.249.34.220
+                                                10.249.34.223
+                                                10.249.34.225
+                                                10.249.34.224
+                                                10.249.34.226
+                                                10.249.34.227
+network-interface
+        name                                    M00
+        sub-port-id                             36
+        description                             IBM Arkadin Network LB
+        ip-address                              10.249.36.200
+        pri-utility-addr                        10.249.36.201
+        sec-utility-addr                        10.249.36.202
+        netmask                                 255.255.255.0
+        gateway                                 10.249.36.254
+network-interface
+        name                                    M01
+        sub-port-id                             1111
+        description                             Adobe_Softphone
+        ip-address                              172.16.120.17
+        pri-utility-addr                        172.16.120.18
+        sec-utility-addr                        172.16.120.19
+        netmask                                 255.255.255.240
+        gateway                                 172.16.120.30
+        hip-ip-list                             172.16.120.20
+                                                172.16.120.21
+        icmp-address                            172.16.120.20
+                                                172.16.120.21
+network-interface
+        name                                    M01
+        sub-port-id                             30
+        description                             IBM_SmartCloud
+        ip-address                              10.249.30.220
+        pri-utility-addr                        10.249.30.221
+        sec-utility-addr                        10.249.30.222
+        netmask                                 255.255.255.0
+        gateway                                 10.249.30.254
+network-interface
+        name                                    M10
+        sub-port-id                             1231
+        description                             MT_LYNC
+        ip-address                              172.17.128.158
+        pri-utility-addr                        172.17.128.157
+        sec-utility-addr                        172.17.128.156
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.128.131
+        icmp-address                            172.17.128.131
+network-interface
+        name                                    M10
+        sub-port-id                             1256
+        ip-address                              172.17.129.59
+        pri-utility-addr                        172.17.129.60
+        sec-utility-addr                        172.17.129.61
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.129.59
+                                                172.17.129.57
+        icmp-address                            172.17.129.59
+                                                172.17.129.57
+network-interface
+        name                                    M10
+        sub-port-id                             3001
+        ip-address                              172.16.250.19
+        pri-utility-addr                        172.16.250.17
+        sec-utility-addr                        172.16.250.18
+        netmask                                 255.255.255.240
+        gateway                                 172.16.250.30
+        dns-domain                              ipvoice.jp
+        hip-ip-list                             172.16.250.20
+        icmp-address                            172.16.250.20
+network-interface
+        name                                    M10
+        sub-port-id                             3103
+        description                             EXT_VPN_UNO_UAT_NTTC
+        ip-address                              172.16.0.28
+        pri-utility-addr                        172.16.0.29
+        sec-utility-addr                        172.16.0.30
+        netmask                                 255.255.255.240
+        gateway                                 172.16.0.22
+        hip-ip-list                             185.37.221.74
+                                                185.37.221.75
+                                                172.16.0.28
+                                                185.37.221.69
+                                                185.37.221.70
+        icmp-address                            185.37.221.74
+                                                185.37.221.75
+                                                172.16.0.28
+                                                185.37.221.69
+                                                185.37.221.70
+network-interface
+        name                                    M10
+        sub-port-id                             3114
+        description                             EXT_VPN_UNO_NTTCNWH323
+        ip-address                              172.30.180.28
+        pri-utility-addr                        172.30.180.29
+        sec-utility-addr                        172.30.180.30
+        netmask                                 255.255.255.240
+        gateway                                 172.30.180.22
+        hip-ip-list                             185.37.221.73
+                                                185.37.221.74
+                                                185.37.221.75
+                                                172.30.180.28
+        icmp-address                            185.37.221.73
+                                                185.37.221.74
+                                                185.37.221.75
+                                                172.30.180.28
+network-interface
+        name                                    M11
+        sub-port-id                             3002
+        description                             BAOTEL
+        ip-address                              172.44.0.14
+        pri-utility-addr                        172.44.0.13
+        sec-utility-addr                        172.44.0.12
+        netmask                                 255.255.255.240
+        gateway                                 172.44.0.1
+        hip-ip-list                             172.44.0.11
+        icmp-address                            172.44.0.11
+network-interface
+        name                                    M11
+        sub-port-id                             3003
+        description                             SBC_SIP_OBS
+        ip-address                              172.30.0.30
+        pri-utility-addr                        172.30.0.29
+        sec-utility-addr                        172.30.0.28
+        netmask                                 255.255.255.240
+        gateway                                 172.30.0.17
+        hip-ip-list                             172.30.0.27
+        icmp-address                            172.30.0.27
+network-interface
+        name                                    M11
+        sub-port-id                             3006
+        description                             SBC_CCA-SP_Asia
+        ip-address                              103.214.228.177
+        pri-utility-addr                        103.214.228.178
+        sec-utility-addr                        103.214.228.179
+        netmask                                 255.255.255.240
+        gateway                                 103.214.228.190
+        dns-ip-primary                          8.8.8.8
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             103.214.228.180
+        icmp-address                            103.214.228.180
+network-interface
+        name                                    M11
+        sub-port-id                             3007
+        description                             SBC_SIP_OBS_LVS
+        ip-address                              172.30.0.46
+        pri-utility-addr                        172.30.0.45
+        sec-utility-addr                        172.30.0.44
+        netmask                                 255.255.255.240
+        gateway                                 172.30.0.33
+        hip-ip-list                             172.30.0.43
+                                                172.30.0.42
+        icmp-address                            172.30.0.43
+                                                172.30.0.42
+network-interface
+        name                                    M11
+        sub-port-id                             4044
+        description                             global-as-shi
+        ip-address                              185.37.221.76
+        pri-utility-addr                        185.37.221.77
+        sec-utility-addr                        185.37.221.78
+        netmask                                 255.255.255.224
+        gateway                                 185.37.221.94
+        hip-ip-list                             185.37.221.76
+                                                185.37.221.80
+        icmp-address                            185.37.221.76
+                                                185.37.221.80
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+JPSHISBC01>exit
+Closing Session
+Received disconnect from 10.249.35.211 port 22:11: Logged out.
+Disconnected from 10.249.35.211 port 22
+ifcsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid ifcsbc01p
+Warning: Permanently added 'ifcsbc01p,10.250.23.110' (RSA) to the list of known hosts.
+rancid@ifcsbc01p's password: 
+
+HKNTTSBC1A> 
+HKNTTSBC1A> cli more disabled
+The ACLI 'more' option has been disabled
+HKNTTSBC1A>  show running-config network-interface short
+network-interface
+        name                                    M00
+        sub-port-id                             21
+        ip-address                              10.250.21.110
+        pri-utility-addr                        10.250.21.111
+        sec-utility-addr                        10.250.21.112
+        netmask                                 255.255.255.0
+        gateway                                 10.250.21.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.250.23.100
+        dns-ip-backup1                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.250.21.110
+                                                10.250.21.113
+                                                10.250.21.114
+                                                10.250.21.115
+                                                10.250.21.116
+                                                10.250.21.117
+                                                10.250.21.118
+        icmp-address                            10.250.21.110
+                                                10.250.21.113
+                                                10.250.21.114
+                                                10.250.21.115
+                                                10.250.21.116
+                                                10.250.21.117
+                                                10.250.21.118
+network-interface
+        name                                    M00
+        sub-port-id                             22
+        ip-address                              10.250.22.110
+        pri-utility-addr                        10.250.22.111
+        sec-utility-addr                        10.250.22.112
+        netmask                                 255.255.255.0
+        gateway                                 10.250.22.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        hip-ip-list                             10.250.22.110
+                                                10.250.22.113
+                                                10.250.22.114
+                                                10.250.22.115
+                                                10.250.22.116
+                                                10.250.22.117
+                                                10.250.22.118
+        icmp-address                            10.250.22.110
+                                                10.250.22.113
+                                                10.250.22.114
+                                                10.250.22.115
+                                                10.250.22.116
+                                                10.250.22.117
+                                                10.250.22.118
+network-interface
+        name                                    M00
+        sub-port-id                             24
+        description                             Avaya-sig
+        ip-address                              10.250.24.251
+        pri-utility-addr                        10.250.24.250
+        sec-utility-addr                        10.250.24.249
+        netmask                                 255.255.255.0
+        gateway                                 10.250.24.254
+        dns-ip-primary                          10.250.23.100
+        dns-ip-backup1                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.250.24.248
+        icmp-address                            10.250.24.248
+network-interface
+        name                                    M00
+        sub-port-id                             25
+        description                             Avaya-rtp
+        ip-address                              10.250.25.251
+        pri-utility-addr                        10.250.25.250
+        sec-utility-addr                        10.250.25.249
+        netmask                                 255.255.255.0
+        gateway                                 10.250.25.254
+        dns-ip-primary                          10.250.23.100
+        dns-ip-backup1                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.250.25.248
+        icmp-address                            10.250.25.248
+network-interface
+        name                                    M01
+        sub-port-id                             4001
+        description                             PUBLIC_AS
+        ip-address                              185.37.221.179
+        pri-utility-addr                        185.37.221.177
+        sec-utility-addr                        185.37.221.178
+        netmask                                 255.255.255.240
+        gateway                                 185.37.221.190
+        dns-ip-primary                          208.67.222.222
+        dns-ip-backup1                          208.67.220.220
+        dns-ip-backup2                          8.8.8.8
+        dns-domain                              ntt.net
+        hip-ip-list                             185.37.221.179
+        icmp-address                            185.37.221.179
+network-interface
+        name                                    M10
+        sub-port-id                             500
+        description                             Voxbone
+        ip-address                              81.201.94.170
+        pri-utility-addr                        81.201.94.171
+        sec-utility-addr                        81.201.94.172
+        netmask                                 255.255.255.248
+        gateway                                 81.201.94.169
+        hip-ip-list                             81.201.94.170
+                                                81.201.94.173
+        icmp-address                            81.201.94.170
+                                                81.201.94.173
+network-interface
+        name                                    M11
+        sub-port-id                             3001
+        description                             BAOTEL
+        ip-address                              172.28.0.30
+        pri-utility-addr                        172.28.0.29
+        sec-utility-addr                        172.28.0.28
+        netmask                                 255.255.255.240
+        gateway                                 172.28.0.17
+        hip-ip-list                             172.28.0.27
+                                                172.28.0.26
+                                                172.28.0.25
+                                                172.28.0.24
+                                                172.28.0.23
+        icmp-address                            172.28.0.27
+                                                172.28.0.26
+                                                172.28.0.25
+                                                172.28.0.24
+                                                172.28.0.23
+network-interface
+        name                                    M11
+        sub-port-id                             3002
+        description                             SBC_SIP_M800
+        ip-address                              10.16.0.14
+        pri-utility-addr                        10.16.0.13
+        sec-utility-addr                        10.16.0.12
+        netmask                                 255.255.255.240
+        gateway                                 10.16.0.1
+        hip-ip-list                             10.16.0.11
+        icmp-address                            10.16.0.11
+network-interface
+        name                                    M11
+        sub-port-id                             3003
+        description                             SBC_SIP_OBS
+        ip-address                              172.28.0.62
+        pri-utility-addr                        172.28.0.61
+        sec-utility-addr                        172.28.0.60
+        netmask                                 255.255.255.240
+        gateway                                 172.28.0.49
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        hip-ip-list                             172.28.0.59
+        icmp-address                            172.28.0.59
+network-interface
+        name                                    M11
+        sub-port-id                             3004
+        description                             SBC_SIP_SG.GS
+        ip-address                              172.16.0.33
+        pri-utility-addr                        172.16.0.34
+        sec-utility-addr                        172.16.0.35
+        netmask                                 255.255.255.240
+        gateway                                 172.16.0.46
+        hip-ip-list                             172.16.0.33
+        icmp-address                            172.16.0.33
+network-interface
+        name                                    M11
+        sub-port-id                             3006
+        description                             SBC_SIP_CCA_SP
+        ip-address                              103.214.228.121
+        pri-utility-addr                        103.214.228.122
+        sec-utility-addr                        103.214.228.123
+        netmask                                 255.255.255.248
+        gateway                                 103.214.228.126
+        dns-ip-primary                          8.8.8.8
+        dns-ip-backup1                          8.8.4.4
+        dns-ip-backup2                          129.250.35.250
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             103.214.228.124
+        icmp-address                            103.214.228.124
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+HKNTTSBC1A>exit
+Closing Session
+Received disconnect from 10.250.23.110 port 22:11: Logged out.
+Disconnected from 10.250.23.110 port 22
+pyrsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid pyrsbc01p
+Warning: Permanently added 'pyrsbc01p,10.248.7.100' (RSA) to the list of known hosts.
+rancid@pyrsbc01p's password: 
+
+AUPYRSBC1> 
+AUPYRSBC1> cli more disabled
+The ACLI 'more' option has been disabled
+AUPYRSBC1>  show running-config network-interface short
+network-interface
+        name                                    m00
+        sub-port-id                             100
+        description                             Core interface
+        ip-address                              10.248.9.100
+        pri-utility-addr                        10.248.9.101
+        sec-utility-addr                        10.248.9.102
+        netmask                                 255.255.255.0
+        gateway                                 10.248.9.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            12
+        dns-ip-primary                          10.248.7.110
+        dns-ip-backup1                          10.250.23.100
+        dns-ip-backup2                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.248.9.100
+                                                10.248.9.105
+        icmp-address                            10.248.9.100
+                                                10.248.9.105
+network-interface
+        name                                    m01
+        sub-port-id                             444
+        description                             public-AS
+        ip-address                              185.37.223.56
+        pri-utility-addr                        185.37.223.57
+        sec-utility-addr                        185.37.223.58
+        netmask                                 255.255.255.240
+        gateway                                 185.37.223.61
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          208.67.222.222
+        dns-ip-backup1                          208.67.220.220
+        dns-ip-backup2                          8.8.8.8
+        dns-domain                              ntt.net
+        hip-ip-list                             185.37.223.56
+        icmp-address                            185.37.223.56
+network-interface
+        name                                    m10
+        sub-port-id                             3003
+        description                             SBC_SIP_DDTA
+        ip-address                              172.31.0.46
+        pri-utility-addr                        172.31.0.45
+        sec-utility-addr                        172.31.0.44
+        netmask                                 255.255.255.240
+        gateway                                 172.31.0.33
+        hip-ip-list                             172.31.0.43
+        icmp-address                            172.31.0.43
+network-interface
+        name                                    m10
+        sub-port-id                             3010
+        description                             SBC_SIP_Broadcloudcalling_main
+        ip-address                              10.0.75.129
+        pri-utility-addr                        10.0.75.131
+        sec-utility-addr                        10.0.75.132
+        netmask                                 255.255.255.240
+        gateway                                 10.0.75.142
+        hip-ip-list                             10.0.75.129
+                                                10.0.75.130
+        icmp-address                            10.0.75.129
+                                                10.0.75.130
+network-interface
+        name                                    m10
+        sub-port-id                             3011
+        description                             SBC_SIP_Broadcloudcalling_bck
+        ip-address                              10.0.75.145
+        pri-utility-addr                        10.0.75.146
+        sec-utility-addr                        10.0.75.147
+        netmask                                 255.255.255.240
+        gateway                                 10.0.75.158
+        hip-ip-list                             10.0.75.145
+        icmp-address                            10.0.75.145
+network-interface
+        name                                    m11
+        sub-port-id                             3001
+        description                             SBC_SIP_BAOTEL
+        ip-address                              172.52.0.14
+        pri-utility-addr                        172.52.0.13
+        sec-utility-addr                        172.52.0.12
+        netmask                                 255.255.255.240
+        gateway                                 172.52.0.1
+        hip-ip-list                             172.52.0.11
+                                                172.52.0.10
+                                                172.52.0.9
+        icmp-address                            172.52.0.11
+                                                172.52.0.10
+                                                172.52.0.9
+network-interface
+        name                                    m11
+        sub-port-id                             3004
+        description                             SBC_SIP_VOCUS
+        ip-address                              185.37.223.57
+        pri-utility-addr                        185.37.223.58
+        sec-utility-addr                        185.37.223.59
+        netmask                                 255.255.255.240
+        gateway                                 185.37.223.62
+        hip-ip-list                             185.37.223.49
+                                                185.37.223.57
+                                                185.37.223.50
+        icmp-address                            185.37.223.57
+                                                185.37.223.49
+                                                185.37.223.50
+network-interface
+        name                                    m11
+        sub-port-id                             3006
+        description                             Cisco_CCA_Asia
+        ip-address                              103.214.228.161
+        pri-utility-addr                        103.214.228.162
+        sec-utility-addr                        103.214.228.163
+        netmask                                 255.255.255.240
+        gateway                                 103.214.228.174
+        dns-ip-primary                          8.8.8.8
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             103.214.228.161
+                                                103.214.228.164
+        icmp-address                            103.214.228.164
+                                                103.214.228.161
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+AUPYRSBC1>exit
+Closing Session
+Received disconnect from 10.248.7.100 port 22:11: Logged out.
+Disconnected from 10.248.7.100 port 22
+sgnsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid sgnsbc01p
+Warning: Permanently added 'sgnsbc01p,10.247.23.100' (RSA) to the list of known hosts.
+rancid@sgnsbc01p's password: 
+
+SGNTTSBC01> 
+SGNTTSBC01> cli more disabled
+The ACLI 'more' option has been disabled
+SGNTTSBC01>  show running-config network-interface short
+network-interface
+        name                                    m00
+        sub-port-id                             21
+        description                             Internal
+        ip-address                              10.247.21.100
+        pri-utility-addr                        10.247.21.101
+        sec-utility-addr                        10.247.21.102
+        netmask                                 255.255.255.0
+        gateway                                 10.247.21.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.247.23.90
+        dns-ip-backup1                          10.250.23.100
+        dns-ip-backup2                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.247.21.100
+                                                10.247.21.104
+                                                10.247.21.105
+                                                10.247.21.106
+        icmp-address                            10.247.21.100
+                                                10.247.21.104
+                                                10.247.21.105
+                                                10.247.21.106
+network-interface
+        name                                    m11
+        sub-port-id                             200
+        ip-address                              202.136.168.20
+        pri-utility-addr                        202.136.168.21
+        sec-utility-addr                        202.136.168.22
+        netmask                                 255.255.255.248
+        gateway                                 202.136.168.17
+        dns-ip-primary                          10.247.23.90
+        dns-ip-backup1                          10.250.23.100
+        dns-ip-backup2                          10.249.23.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             202.136.168.20
+        icmp-address                            202.136.168.20
+network-interface
+        name                                    m11
+        sub-port-id                             3001
+        description                             BAOTEL
+        ip-address                              172.36.0.14
+        pri-utility-addr                        172.36.0.13
+        sec-utility-addr                        172.36.0.12
+        netmask                                 255.255.255.248
+        gateway                                 172.36.0.9
+        hip-ip-list                             172.36.0.14
+        icmp-address                            172.36.0.14
+network-interface
+        name                                    m11
+        sub-port-id                             3002
+        description                             SBC_SIP_M800
+        ip-address                              10.16.0.30
+        pri-utility-addr                        10.16.0.29
+        sec-utility-addr                        10.16.0.28
+        netmask                                 255.255.255.240
+        gateway                                 10.16.0.17
+        hip-ip-list                             10.16.0.27
+        icmp-address                            10.16.0.27
+network-interface
+        name                                    m11
+        sub-port-id                             3003
+        description                             SBC_SIP_OBS
+        ip-address                              172.36.0.46
+        pri-utility-addr                        172.36.0.45
+        sec-utility-addr                        172.36.0.44
+        netmask                                 255.255.255.240
+        gateway                                 172.36.0.33
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        hip-ip-list                             172.36.0.43
+        icmp-address                            172.36.0.43
+network-interface
+        name                                    m11
+        sub-port-id                             3004
+        description                             SBC_SIP_SG.GS
+        ip-address                              172.16.0.49
+        pri-utility-addr                        172.16.0.50
+        sec-utility-addr                        172.16.0.51
+        netmask                                 255.255.255.240
+        gateway                                 172.16.0.62
+        hip-ip-list                             172.16.0.49
+        icmp-address                            172.16.0.49
+network-interface
+        name                                    m11
+        sub-port-id                             3005
+        description                             SBC_SIP_TATA
+        ip-address                              172.16.32.20
+        pri-utility-addr                        172.16.32.21
+        sec-utility-addr                        172.16.32.22
+        netmask                                 255.255.255.240
+        gateway                                 172.16.32.17
+        hip-ip-list                             172.16.32.23
+                                                172.16.32.20
+                                                172.16.32.25
+        icmp-address                            172.16.32.23
+                                                172.16.32.20
+                                                172.16.32.25
+network-interface
+        name                                    m11
+        sub-port-id                             3006
+        description                             SBC_SIP_CCA_SP
+        ip-address                              103.214.228.137
+        pri-utility-addr                        103.214.228.138
+        sec-utility-addr                        103.214.228.139
+        netmask                                 255.255.255.248
+        gateway                                 103.214.228.142
+        dns-ip-primary                          8.8.8.8
+        dns-ip-backup1                          8.8.4.4
+        dns-ip-backup2                          129.250.35.250
+        dns-domain                              arkadinvoip.com
+network-interface
+        name                                    m11
+        sub-port-id                             3008
+        description                             SBC_SIP_STARHUB
+        ip-address                              172.31.129.230
+        pri-utility-addr                        172.31.129.229
+        sec-utility-addr                        172.31.129.228
+        netmask                                 255.255.255.240
+        gateway                                 172.31.129.225
+        hip-ip-list                             172.31.129.237
+        icmp-address                            172.31.129.237
+network-interface
+        name                                    m11
+        sub-port-id                             3009
+        description                             SBC_SIP_APPLICABLE
+        ip-address                              100.64.41.9
+        pri-utility-addr                        100.64.41.10
+        sec-utility-addr                        100.64.41.11
+        netmask                                 255.255.255.240
+        gateway                                 100.64.41.14
+        hip-ip-list                             100.64.41.9
+                                                100.64.41.1
+        icmp-address                            100.64.41.9
+                                                100.64.41.1
+network-interface
+        name                                    m11
+        sub-port-id                             3010
+        description                             M1
+        ip-address                              198.18.65.14
+        pri-utility-addr                        198.18.65.13
+        sec-utility-addr                        198.18.65.12
+        netmask                                 255.255.255.240
+        gateway                                 198.18.65.1
+        hip-ip-list                             198.18.65.11
+                                                198.18.65.14
+        icmp-address                            198.18.65.11
+                                                198.18.65.14
+network-interface
+        name                                    m11
+        sub-port-id                             3011
+        description                             SBC_SIP_STARHUB2
+        ip-address                              172.31.129.87
+        pri-utility-addr                        172.31.129.85
+        sec-utility-addr                        172.31.129.86
+        netmask                                 255.255.255.240
+        gateway                                 172.31.129.81
+        hip-ip-list                             172.31.129.87
+        icmp-address                            172.31.129.87
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+SGNTTSBC01>exit
+Closing Session
+Received disconnect from 10.247.23.100 port 22:11: Logged out.
+Disconnected from 10.247.23.100 port 22

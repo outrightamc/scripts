@@ -1,0 +1,64 @@
+tbrsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid tbrsbc01p
+rancid@tbrsbc01p's password: 
+
+tbrsbc01p> 
+tbrsbc01p> cli more disabled
+The ACLI 'more' option has been disabled
+tbrsbc01p>  show running-config network-interface short
+network-interface
+        name                                    M00
+        sub-port-id                             21
+        description                             BRTBR_SIP_Signalling
+        ip-address                              10.120.21.220
+        pri-utility-addr                        10.120.21.221
+        sec-utility-addr                        10.120.21.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.21.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.124.25.132
+        dns-ip-backup2                          10.101.13.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.120.21.220
+                                                10.120.21.200
+                                                10.120.21.1
+                                                10.120.21.2
+                                                10.120.21.3
+                                                10.120.21.4
+        icmp-address                            10.120.21.220
+                                                10.120.21.200
+                                                10.120.21.1
+                                                10.120.21.2
+                                                10.120.21.3
+                                                10.120.21.4
+network-interface
+        name                                    M00
+        sub-port-id                             22
+        description                             BRTBR_RTP_Traffic
+        ip-address                              10.120.22.220
+        pri-utility-addr                        10.120.22.221
+        sec-utility-addr                        10.120.22.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.22.254
+        hip-ip-list                             10.120.22.220
+        icmp-address                            10.120.22.220
+network-interface
+        name                                    M00
+        sub-port-id                             30
+        description                             BRSAO_SIPTraffic
+        ip-address                              10.120.30.220
+        pri-utility-addr                        10.120.30.221
+        sec-utility-addr                        10.120.30.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.30.254
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.124.25.132
+        dns-ip-backup2                          10.101.13.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.120.30.220
+        icmp-address                            10.120.30.220

@@ -1,0 +1,890 @@
+tbrsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid tbrsbc01p
+rancid@tbrsbc01p's password: 
+
+tbrsbc01p> 
+tbrsbc01p> cli more disabled
+The ACLI 'more' option has been disabled
+tbrsbc01p>  show running-config network-interface short
+network-interface
+        name                                    M00
+        sub-port-id                             21
+        description                             BRTBR_SIP_Signalling
+        ip-address                              10.120.21.220
+        pri-utility-addr                        10.120.21.221
+        sec-utility-addr                        10.120.21.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.21.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.124.25.132
+        dns-ip-backup2                          10.101.13.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.120.21.220
+                                                10.120.21.200
+                                                10.120.21.1
+                                                10.120.21.2
+                                                10.120.21.3
+                                                10.120.21.4
+        icmp-address                            10.120.21.220
+                                                10.120.21.200
+                                                10.120.21.1
+                                                10.120.21.2
+                                                10.120.21.3
+                                                10.120.21.4
+network-interface
+        name                                    M00
+        sub-port-id                             22
+        description                             BRTBR_RTP_Traffic
+        ip-address                              10.120.22.220
+        pri-utility-addr                        10.120.22.221
+        sec-utility-addr                        10.120.22.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.22.254
+        hip-ip-list                             10.120.22.220
+        icmp-address                            10.120.22.220
+network-interface
+        name                                    M00
+        sub-port-id                             30
+        description                             BRSAO_SIPTraffic
+        ip-address                              10.120.30.220
+        pri-utility-addr                        10.120.30.221
+        sec-utility-addr                        10.120.30.222
+        netmask                                 255.255.255.0
+        gateway                                 10.120.30.254
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.124.25.132
+        dns-ip-backup2                          10.101.13.100
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.120.30.220
+        icmp-address                            10.120.30.220
+network-interface
+        name                                    M01
+        sub-port-id                             101
+        description                             Internet
+        ip-address                              186.193.235.55
+        pri-utility-addr                        186.193.235.56
+        sec-utility-addr                        186.193.235.57
+        netmask                                 255.255.255.240
+        gateway                                 186.193.235.49
+        icmp-address                            186.193.235.55
+network-interface
+        name                                    M10
+        sub-port-id                             3003
+        description                             VALE_SIPTraffic
+        ip-address                              142.40.223.33
+        pri-utility-addr                        142.40.223.34
+        sec-utility-addr                        142.40.223.35
+        netmask                                 255.255.255.240
+        gateway                                 142.40.223.46
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             142.40.223.33
+        icmp-address                            142.40.223.33
+network-interface
+        name                                    M11
+        sub-port-id                             1100
+        hostname                                SBC_Intelig
+        ip-address                              201.12.204.139
+        pri-utility-addr                        201.12.204.137
+        sec-utility-addr                        201.12.204.138
+        netmask                                 255.255.255.248
+        gateway                                 201.12.204.142
+        hip-ip-list                             201.12.204.139
+        icmp-address                            201.12.204.139
+network-interface
+        name                                    M11
+        sub-port-id                             1103
+        ip-address                              172.16.120.26
+        pri-utility-addr                        172.16.120.27
+        sec-utility-addr                        172.16.120.28
+        netmask                                 255.255.255.248
+        gateway                                 172.16.120.25
+        hip-ip-list                             172.16.120.26
+        icmp-address                            172.16.120.26
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+tbrsbc01p>exit
+Closing Session
+Received disconnect from 10.120.3.102 port 22:11: Logged out.
+Disconnected from 10.120.3.102 port 22
+chisbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid chisbc01p
+rancid@chisbc01p's password: 
+
+USCHISBC1A> 
+USCHISBC1A> cli more disabled
+The ACLI 'more' option has been disabled
+USCHISBC1A>  show running-config network-interface short
+network-interface
+        name                                    M00
+        sub-port-id                             178
+        description                             Chi-public-cogent Internet
+        ip-address                              38.103.112.108
+        pri-utility-addr                        38.103.112.109
+        sec-utility-addr                        38.103.112.110
+        netmask                                 255.0.0.0
+        gateway                                 38.103.112.105
+        hip-ip-list                             38.103.112.108
+        icmp-address                            38.103.112.108
+network-interface
+        name                                    M00
+        sub-port-id                             3000
+        description                             CHI_PUBLIC_AUDIO
+        ip-address                              185.37.222.65
+        pri-utility-addr                        185.37.222.67
+        sec-utility-addr                        185.37.222.68
+        netmask                                 255.255.255.192
+        gateway                                 185.37.222.123
+        hip-ip-list                             185.37.222.65
+        icmp-address                            185.37.222.65
+network-interface
+        name                                    M00
+        sub-port-id                             3302
+        ip-address                              192.168.100.33
+        pri-utility-addr                        192.168.100.34
+        sec-utility-addr                        192.168.100.35
+        netmask                                 255.255.255.224
+        gateway                                 192.168.100.62
+        hip-ip-list                             192.168.100.33
+        icmp-address                            192.168.100.33
+network-interface
+        name                                    M00
+        sub-port-id                             911
+        description                             Chi-peer-level3 Internet
+        ip-address                              8.30.240.50
+        pri-utility-addr                        8.30.240.51
+        sec-utility-addr                        8.30.240.52
+        netmask                                 255.255.255.0
+        gateway                                 8.30.240.1
+        hip-ip-list                             8.30.240.50
+        icmp-address                            8.30.240.50
+network-interface
+        name                                    M00
+        sub-port-id                             912
+        description                             CentuaryLink Arkadin SIP Trunk
+        ip-address                              198.233.149.209
+        pri-utility-addr                        198.233.149.214
+        sec-utility-addr                        198.233.149.215
+        netmask                                 255.255.255.240
+        gateway                                 198.233.149.222
+        hip-ip-list                             198.233.149.209
+        icmp-address                            198.233.149.209
+network-interface
+        name                                    M01
+        sub-port-id                             178
+        description                             Chi-public-cogent Internet 2
+        ip-address                              38.65.194.200
+        pri-utility-addr                        38.65.194.201
+        sec-utility-addr                        38.65.194.202
+        netmask                                 255.0.0.0
+        gateway                                 38.103.112.105
+network-interface
+        name                                    M01
+        sub-port-id                             2025
+        description                             Customer:Applicable-ATC-E
+        ip-address                              100.64.40.13
+        pri-utility-addr                        100.64.40.12
+        sec-utility-addr                        100.64.40.11
+        netmask                                 255.255.255.240
+        gateway                                 100.64.40.14
+        hip-ip-list                             100.64.40.13
+        icmp-address                            100.64.40.13
+network-interface
+        name                                    M01
+        sub-port-id                             3000
+        ip-address                              185.37.222.119
+        pri-utility-addr                        185.37.222.120
+        sec-utility-addr                        185.37.222.124
+        netmask                                 255.255.255.192
+        gateway                                 185.37.222.123
+        hip-ip-list                             185.37.222.119
+        icmp-address                            185.37.222.119
+network-interface
+        name                                    M01
+        sub-port-id                             3001
+        ip-address                              172.16.1.42
+        pri-utility-addr                        172.16.1.41
+        sec-utility-addr                        172.16.1.40
+        netmask                                 255.255.255.240
+        gateway                                 172.16.1.46
+        hip-ip-list                             172.16.1.42
+                                                172.16.1.33
+        icmp-address                            172.16.1.42
+                                                172.16.1.33
+network-interface
+        name                                    M01
+        sub-port-id                             3002
+        description                             NTTA_WILDCARD
+        ip-address                              209.212.229.251
+        pri-utility-addr                        209.212.229.252
+        sec-utility-addr                        209.212.229.253
+        netmask                                 255.255.255.240
+        gateway                                 209.212.229.254
+        hip-ip-list                             209.212.229.251
+        icmp-address                            209.212.229.251
+network-interface
+        name                                    M01
+        sub-port-id                             3003
+        description                             Blitz-gtt
+        ip-address                              64.45.148.27
+        pri-utility-addr                        64.45.148.28
+        sec-utility-addr                        64.45.148.29
+        netmask                                 255.255.255.248
+        gateway                                 64.45.148.30
+        hip-ip-list                             64.45.148.27
+        icmp-address                            64.45.148.27
+network-interface
+        name                                    M01
+        sub-port-id                             3010
+        description                             BroadSoft
+        ip-address                              10.0.66.137
+        pri-utility-addr                        10.0.66.138
+        sec-utility-addr                        10.0.66.139
+        netmask                                 255.255.255.240
+        gateway                                 10.0.66.142
+        hip-ip-list                             10.0.66.137
+        icmp-address                            10.0.66.137
+network-interface
+        name                                    M01
+        sub-port-id                             3012
+        description                             Cisco-PMP-USA
+        ip-address                              192.206.95.241
+        pri-utility-addr                        192.206.95.242
+        sec-utility-addr                        192.206.95.243
+        netmask                                 255.255.255.240
+        gateway                                 192.206.95.253
+        dns-ip-primary                          8.8.8.8
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             192.206.95.241
+        icmp-address                            192.206.95.241
+network-interface
+        name                                    M01
+        sub-port-id                             3501
+        description                             public interenet sip trunks
+        ip-address                              192.206.95.209
+        pri-utility-addr                        192.206.95.210
+        sec-utility-addr                        192.206.95.211
+        netmask                                 255.255.255.240
+        gateway                                 192.206.95.222
+network-interface
+        name                                    M01
+        sub-port-id                             903
+        description                             Global Crossing
+        ip-address                              172.16.1.1
+        pri-utility-addr                        172.16.1.5
+        sec-utility-addr                        172.16.1.6
+        netmask                                 255.255.255.240
+        gateway                                 172.16.1.14
+        hip-ip-list                             172.16.1.1
+        icmp-address                            172.16.1.1
+network-interface
+        name                                    M01
+        sub-port-id                             904
+        description                             Chi-peer-excel
+        ip-address                              172.16.1.17
+        pri-utility-addr                        172.16.1.18
+        sec-utility-addr                        172.16.1.19
+        netmask                                 255.255.255.240
+        gateway                                 172.16.1.30
+        hip-ip-list                             172.16.1.17
+        icmp-address                            172.16.1.17
+network-interface
+        name                                    M01
+        sub-port-id                             905
+        description                             Chi-peer-ctl
+        ip-address                              63.145.134.105
+        pri-utility-addr                        63.145.134.106
+        sec-utility-addr                        63.145.134.107
+        netmask                                 255.255.255.248
+        gateway                                 63.145.134.110
+        hip-ip-list                             63.145.134.105
+        icmp-address                            63.145.134.105
+network-interface
+        name                                    M10
+        sub-port-id                             11
+        description                             Legacy ConfPlus
+        ip-address                              172.21.11.10
+        pri-utility-addr                        172.21.11.11
+        sec-utility-addr                        172.21.11.12
+        netmask                                 255.255.255.0
+        gateway                                 172.21.11.1
+        hip-ip-list                             172.21.11.10
+        icmp-address                            172.21.11.10
+network-interface
+        name                                    M10
+        sub-port-id                             181
+        description                             Chi-core Network
+        ip-address                              10.100.81.10
+        pri-utility-addr                        10.100.81.11
+        sec-utility-addr                        10.100.81.12
+        netmask                                 255.255.255.0
+        gateway                                 10.100.81.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.100.70.103
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.81.10
+                                                10.100.81.64
+        icmp-address                            10.100.81.10
+                                                10.100.81.64
+network-interface
+        name                                    M10
+        sub-port-id                             31
+        description                             FootLocker
+        ip-address                              172.31.1.5
+        pri-utility-addr                        172.31.1.6
+        sec-utility-addr                        172.31.1.7
+        netmask                                 255.255.255.0
+        gateway                                 172.31.1.1
+network-interface
+        name                                    M10
+        sub-port-id                             931
+        description                             Cambium
+        ip-address                              172.31.255.241
+        pri-utility-addr                        172.31.255.243
+        sec-utility-addr                        172.31.255.244
+        netmask                                 255.255.255.248
+        gateway                                 172.31.255.246
+        hip-ip-list                             172.31.255.241
+        icmp-address                            172.31.255.241
+network-interface
+        name                                    M11
+        sub-port-id                             11
+        description                             Legacy ConfPlus 2
+        ip-address                              172.21.11.20
+        pri-utility-addr                        172.21.11.21
+        sec-utility-addr                        172.21.11.22
+        netmask                                 255.255.255.0
+        gateway                                 172.21.11.1
+        hip-ip-list                             172.21.11.20
+        icmp-address                            172.21.11.20
+network-interface
+        name                                    M11
+        sub-port-id                             181
+        description                             Core2
+        ip-address                              10.100.81.20
+        pri-utility-addr                        10.100.81.21
+        sec-utility-addr                        10.100.81.22
+        netmask                                 255.255.255.0
+        gateway                                 10.100.81.254
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.100.70.103
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.81.20
+                                                10.100.81.54
+                                                10.100.81.52
+        icmp-address                            10.100.81.20
+                                                10.100.81.54
+                                                10.100.81.52
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+USCHISBC1A>exit
+Closing Session
+Received disconnect from 10.100.80.10 port 22:11: Logged out.
+Disconnected from 10.100.80.10 port 22
+atlsbc02p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid atlsbc02p
+rancid@atlsbc02p's password: 
+
+atlsbc02a> 
+atlsbc02a> cli more disabled
+The ACLI 'more' option has been disabled
+atlsbc02a>  show running-config network-interface short
+network-interface
+        name                                    m00
+        sub-port-id                             1236
+        description                             atl-lync-vded-Arka
+        ip-address                              172.17.64.180
+        pri-utility-addr                        172.17.64.181
+        sec-utility-addr                        172.17.64.182
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.64.180
+        icmp-address                            172.17.64.180
+network-interface
+        name                                    m00
+        sub-port-id                             124
+        ip-address                              10.100.124.240
+        pri-utility-addr                        10.100.124.241
+        sec-utility-addr                        10.100.124.242
+        netmask                                 255.255.255.0
+        gateway                                 10.100.124.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.100.70.103
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.124.240
+        icmp-address                            10.100.124.240
+network-interface
+        name                                    m00
+        sub-port-id                             1241
+        description                             Motus
+        ip-address                              172.17.64.200
+        pri-utility-addr                        172.17.64.201
+        sec-utility-addr                        172.17.64.202
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.64.200
+        icmp-address                            172.17.64.200
+network-interface
+        name                                    m00
+        sub-port-id                             1251
+        description                             Lync VDED RouteMatch
+        ip-address                              172.17.65.25
+        pri-utility-addr                        172.17.65.26
+        sec-utility-addr                        172.17.65.27
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.65.25
+        icmp-address                            172.17.65.25
+network-interface
+        name                                    m00
+        sub-port-id                             1256
+        description                             SFB MT
+        ip-address                              172.17.65.20
+        pri-utility-addr                        172.17.65.21
+        sec-utility-addr                        172.17.65.22
+        netmask                                 255.255.255.224
+        hip-ip-list                             172.17.65.20
+        icmp-address                            172.17.65.20
+network-interface
+        name                                    m00
+        sub-port-id                             24
+        ip-address                              10.100.24.240
+        pri-utility-addr                        10.100.24.241
+        sec-utility-addr                        10.100.24.242
+        netmask                                 255.255.255.0
+        gateway                                 10.100.24.254
+        dns-ip-primary                          10.122.16.1
+        dns-ip-backup1                          10.100.70.103
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.24.240
+                                                10.100.24.140
+                                                10.100.24.141
+                                                10.100.24.142
+                                                10.100.24.143
+                                                10.100.24.144
+                                                10.100.24.145
+                                                10.100.24.146
+                                                10.100.24.147
+                                                10.100.24.148
+                                                10.100.24.149
+                                                10.100.24.150
+                                                10.100.24.151
+                                                10.100.24.182
+        icmp-address                            10.100.24.240
+                                                10.100.24.140
+                                                10.100.24.141
+                                                10.100.24.142
+                                                10.100.24.143
+                                                10.100.24.144
+                                                10.100.24.145
+                                                10.100.24.146
+                                                10.100.24.147
+                                                10.100.24.148
+                                                10.100.24.149
+                                                10.100.24.150
+                                                10.100.24.151
+                                                10.100.24.182
+network-interface
+        name                                    m01
+        sub-port-id                             1111
+        ip-address                              172.16.120.27
+        pri-utility-addr                        172.16.120.28
+        sec-utility-addr                        172.16.120.29
+        netmask                                 255.255.255.240
+        hip-ip-list                             172.16.120.27
+        icmp-address                            172.16.120.27
+network-interface
+        name                                    m01
+        sub-port-id                             172
+        description                             GC IPVN
+        ip-address                              172.16.0.1
+        pri-utility-addr                        172.16.0.2
+        sec-utility-addr                        172.16.0.3
+        netmask                                 255.255.255.240
+        gateway                                 172.16.0.14
+network-interface
+        name                                    m01
+        sub-port-id                             173
+        description                             Excel-Impact
+        ip-address                              172.16.0.17
+        pri-utility-addr                        172.16.0.18
+        sec-utility-addr                        172.16.0.19
+        netmask                                 255.255.255.240
+        gateway                                 172.16.0.30
+network-interface
+        name                                    m01
+        sub-port-id                             184
+        description                             ETB Columbia
+        ip-address                              172.16.100.87
+        pri-utility-addr                        172.16.100.88
+        sec-utility-addr                        172.16.100.89
+        netmask                                 255.255.255.240
+        gateway                                 172.16.100.94
+network-interface
+        name                                    m01
+        sub-port-id                             200
+        description                             IBM-VMCU-Prod
+        ip-address                              10.0.250.30
+        pri-utility-addr                        10.0.250.31
+        sec-utility-addr                        10.0.250.32
+        netmask                                 255.255.255.0
+        gateway                                 10.0.250.254
+network-interface
+        name                                    m01
+        sub-port-id                             3002
+        description                             AXA
+        ip-address                              172.16.100.39
+        pri-utility-addr                        172.16.100.40
+        sec-utility-addr                        172.16.100.41
+        netmask                                 255.255.255.240
+        gateway                                 172.16.100.46
+network-interface
+        name                                    m01
+        sub-port-id                             3010
+        ip-address                              10.0.65.137
+        pri-utility-addr                        10.0.65.138
+        sec-utility-addr                        10.0.65.139
+        netmask                                 255.255.255.240
+        gateway                                 10.0.65.142
+        hip-ip-list                             10.0.65.137
+        icmp-address                            10.0.65.137
+network-interface
+        name                                    m01
+        sub-port-id                             3012
+        description                             Cisco-PMP-USA
+        ip-address                              192.206.95.225
+        pri-utility-addr                        192.206.95.226
+        sec-utility-addr                        192.206.95.227
+        netmask                                 255.255.255.240
+        gateway                                 192.206.95.230
+        dns-ip-primary                          8.8.8.8
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             192.206.95.225
+        icmp-address                            192.206.95.225
+network-interface
+        name                                    m01
+        sub-port-id                             3014
+        ip-address                              185.37.221.129
+        pri-utility-addr                        185.37.221.130
+        sec-utility-addr                        185.37.221.131
+        netmask                                 255.255.255.240
+        gateway                                 185.37.221.142
+        dns-ip-primary                          208.67.222.222
+        dns-ip-backup1                          208.67.220.220
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             185.37.221.129
+                                                185.37.221.135
+                                                185.37.221.139
+        icmp-address                            185.37.221.129
+                                                185.37.221.135
+                                                185.37.221.139
+network-interface
+        name                                    m01
+        sub-port-id                             3015
+        description                             NORAM Carrier Globas AS VOIP Network
+        ip-address                              185.37.222.23
+        pri-utility-addr                        185.37.222.24
+        sec-utility-addr                        185.37.222.25
+        netmask                                 255.255.255.224
+        gateway                                 185.37.222.30
+        dns-ip-primary                          208.67.222.222
+        dns-ip-backup1                          208.67.220.220
+        dns-ip-backup2                          8.8.8.8
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             185.37.222.23
+        icmp-address                            185.37.222.23
+network-interface
+        name                                    m01
+        sub-port-id                             3016
+        description                             Cisco-Peer
+        ip-address                              192.206.95.65
+        pri-utility-addr                        192.206.95.67
+        sec-utility-addr                        192.206.95.66
+        netmask                                 255.255.255.248
+        gateway                                 192.206.95.70
+        dns-domain                              arkadinvoip.com
+network-interface
+        name                                    m01
+        sub-port-id                             3017
+        description                             Customer:Applicable-ATC-E
+        ip-address                              100.64.40.139
+        pri-utility-addr                        100.64.40.138
+        sec-utility-addr                        100.64.40.137
+        netmask                                 255.255.255.240
+        gateway                                 100.64.40.142
+        hip-ip-list                             100.64.40.139
+        icmp-address                            100.64.40.139
+network-interface
+        name                                    m01
+        sub-port-id                             3018
+        description                             InterMountain
+        ip-address                              10.5.250.139
+        pri-utility-addr                        10.5.250.138
+        sec-utility-addr                        10.5.250.137
+        netmask                                 255.255.255.240
+        gateway                                 10.5.250.142
+        hip-ip-list                             10.5.250.139
+        icmp-address                            10.5.250.139
+network-interface
+        name                                    m01
+        sub-port-id                             3019
+        description                             NTTA_WILDCARD
+        ip-address                              209.212.229.235
+        pri-utility-addr                        209.212.229.234
+        sec-utility-addr                        209.212.229.233
+        netmask                                 255.255.255.240
+        gateway                                 209.212.229.238
+        hip-ip-list                             209.212.229.235
+        icmp-address                            209.212.229.235
+network-interface
+        name                                    m01
+        sub-port-id                             3020
+        description                             Bell_Canada
+        ip-address                              172.16.100.108
+        pri-utility-addr                        172.16.100.107
+        sec-utility-addr                        172.16.100.106
+        netmask                                 255.255.255.240
+        gateway                                 172.16.100.110
+        hip-ip-list                             172.16.100.108
+        icmp-address                            172.16.100.108
+network-interface
+        name                                    m01
+        sub-port-id                             3021
+        description                             Blitz-GTT
+        ip-address                              64.45.148.35
+        pri-utility-addr                        64.45.148.36
+        sec-utility-addr                        64.45.148.37
+        netmask                                 255.255.255.248
+        gateway                                 64.45.148.38
+        hip-ip-list                             64.45.148.35
+        icmp-address                            64.45.148.35
+network-interface
+        name                                    m01
+        sub-port-id                             3036
+        description                             ThermoFisher
+        ip-address                              10.166.232.129
+        pri-utility-addr                        10.166.232.130
+        sec-utility-addr                        10.166.232.131
+        netmask                                 255.255.255.240
+        gateway                                 10.166.232.142
+        hip-ip-list                             10.166.232.129
+        icmp-address                            10.166.232.129
+network-interface
+        name                                    m01
+        sub-port-id                             3302
+        ip-address                              192.168.100.1
+        pri-utility-addr                        192.168.100.2
+        sec-utility-addr                        192.168.100.3
+        netmask                                 255.255.255.224
+        gateway                                 192.168.100.30
+        hip-ip-list                             192.168.100.1
+        icmp-address                            192.168.100.1
+network-interface
+        name                                    m01
+        sub-port-id                             3518
+        description                             IBM-PP-IR3
+        ip-address                              10.183.6.43
+        pri-utility-addr                        10.183.6.44
+        sec-utility-addr                        10.183.6.45
+        netmask                                 255.255.255.240
+        gateway                                 10.183.6.46
+        hip-ip-list                             10.183.6.43
+                                                10.183.6.33
+                                                10.183.6.42
+        icmp-address                            10.183.6.43
+                                                10.183.6.42
+                                                10.183.6.33
+network-interface
+        name                                    m01
+        sub-port-id                             4004
+        ip-address                              192.206.95.78
+        pri-utility-addr                        192.206.95.77
+        sec-utility-addr                        192.206.95.76
+        netmask                                 255.255.255.248
+        gateway                                 192.206.95.73
+        hip-ip-list                             192.206.95.78
+                                                192.206.95.75
+        icmp-address                            192.206.95.78
+                                                192.206.95.75
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+atlsbc02a>exit
+Closing Session
+Received disconnect from 10.100.22.223 port 22:11: Logged out.
+Disconnected from 10.100.22.223 port 22
+sjcsbc01p
+spawn ssh -c 3des-cbc,aes256-cbc,aes256-ctr -x -l rancid sjcsbc01p
+rancid@sjcsbc01p's password: 
+
+USSJSBC01A> 
+USSJSBC01A> cli more disabled
+The ACLI 'more' option has been disabled
+USSJSBC01A>  show running-config network-interface short
+network-interface
+        name                                    m00
+        sub-port-id                             513
+        description                             FootLocker
+        ip-address                              172.31.1.5
+        pri-utility-addr                        172.31.1.6
+        sec-utility-addr                        172.31.1.7
+        netmask                                 255.255.255.0
+        hip-ip-list                             172.31.1.5
+        icmp-address                            172.31.1.5
+network-interface
+        name                                    m00
+        sub-port-id                             71
+        ip-address                              10.100.71.10
+        pri-utility-addr                        10.100.71.11
+        sec-utility-addr                        10.100.71.12
+        netmask                                 255.255.255.0
+        gateway                                 10.100.71.254
+        gw-heartbeat
+                state                                   enabled
+                heartbeat                               2
+                retry-count                             3
+                health-score                            13
+        dns-ip-primary                          10.100.70.103
+        dns-ip-backup1                          10.122.16.1
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.71.10
+                                                10.100.71.118
+        icmp-address                            10.100.71.10
+                                                10.100.71.118
+network-interface
+        name                                    m00
+        sub-port-id                             72
+        ip-address                              10.100.72.10
+        pri-utility-addr                        10.100.72.11
+        sec-utility-addr                        10.100.72.12
+        netmask                                 255.255.255.0
+        gateway                                 10.100.72.254
+        dns-ip-primary                          10.100.70.103
+        dns-ip-backup1                          10.122.16.1
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             10.100.72.10
+        icmp-address                            10.100.72.10
+network-interface
+        name                                    m01
+        sub-port-id                             3005
+        description                             Carrier Network ussjoinet01
+        ip-address                              185.37.222.97
+        pri-utility-addr                        185.37.222.98
+        sec-utility-addr                        185.37.222.99
+        netmask                                 255.255.255.240
+        gateway                                 185.37.222.110
+        hip-ip-list                             185.37.222.97
+                                                185.37.222.104
+        icmp-address                            185.37.222.97
+                                                185.37.222.104
+network-interface
+        name                                    m01
+        sub-port-id                             3006
+        description                             Carrier Network ussjoinet02
+        ip-address                              185.37.222.113
+        pri-utility-addr                        185.37.222.114
+        sec-utility-addr                        185.37.222.115
+        netmask                                 255.255.255.240
+        gateway                                 185.37.222.126
+        hip-ip-list                             185.37.222.113
+                                                185.37.222.116
+        icmp-address                            185.37.222.113
+                                                185.37.222.116
+network-interface
+        name                                    m01
+        sub-port-id                             3016
+        description                             Cisco CCA
+        ip-address                              192.206.95.185
+        pri-utility-addr                        192.206.95.187
+        sec-utility-addr                        192.206.95.188
+        netmask                                 255.255.255.248
+        gateway                                 192.206.95.190
+        dns-domain                              arkadinvoip.com
+        hip-ip-list                             192.206.95.185
+        icmp-address                            192.206.95.18
+                                                192.206.95.185
+network-interface
+        name                                    m01
+        sub-port-id                             3017
+        description                             IHC Cisco CCA_SP
+        ip-address                              10.5.250.8
+        pri-utility-addr                        10.5.250.9
+        sec-utility-addr                        10.5.250.10
+        netmask                                 255.255.255.240
+        gateway                                 10.5.250.14
+        hip-ip-list                             10.5.250.8
+        icmp-address                            10.5.250.8
+network-interface
+        name                                    m01
+        sub-port-id                             3036
+        description                             ThermoFisher
+        ip-address                              10.166.233.129
+        pri-utility-addr                        10.166.233.130
+        sec-utility-addr                        10.166.233.131
+        netmask                                 255.255.255.240
+        gateway                                 10.166.233.142
+        hip-ip-list                             10.166.233.129
+        icmp-address                            10.166.233.129
+network-interface
+        name                                    m01
+        sub-port-id                             4001
+        description                             global-as-sjc
+        ip-address                              185.37.221.227
+        pri-utility-addr                        185.37.221.225
+        sec-utility-addr                        185.37.221.226
+        netmask                                 255.255.255.240
+        gateway                                 185.37.221.238
+        dns-ip-primary                          208.67.222.222
+        dns-ip-backup1                          208.67.220.220
+        dns-ip-backup2                          8.8.8.8
+        dns-domain                              ntt.net
+        hip-ip-list                             185.37.221.227
+        icmp-address                            185.37.221.227
+network-interface
+        name                                    wancom1
+        pri-utility-addr                        169.254.1.1
+        sec-utility-addr                        169.254.1.2
+        netmask                                 255.255.255.252
+network-interface
+        name                                    wancom2
+        pri-utility-addr                        169.254.2.1
+        sec-utility-addr                        169.254.2.2
+        netmask                                 255.255.255.252
+USSJSBC01A>exit
+Closing Session
+Received disconnect from 10.100.70.10 port 22:11: Logged out.
+Disconnected from 10.100.70.10 port 22
